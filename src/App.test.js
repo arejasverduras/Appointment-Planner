@@ -19,26 +19,4 @@ test ('render app succesfully in test', ()=>{
     
 })
 
-// test ('addContact function should add new Contact to Contacts array using setState', ()=>{
-//     //assemble
-//     render (
-//         <Router>
-//             <App />
-//         </Router>
-//         );
-    
-//         const newContact = {
-//             name: 'Michiel',
-//             phone: 'prive',
-//             email: 'zegikniet@email.com'
-//           }
-
-//         const expectedResult = [{
-//             name: 'Michiel',
-//             phone: 'prive',
-//             email: 'zegikniet@email.com'
-//           }]
-//           //act
-          
-         
-// })
+// 

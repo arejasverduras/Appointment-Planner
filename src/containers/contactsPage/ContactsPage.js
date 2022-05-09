@@ -10,8 +10,6 @@ export const ContactsPage = (props) => {
  const [phone, setPhone] = useState('');
  const [email, setEmail] = useState('');
  const [duplicate, setDuplicate] = useState(false);
-
-
    //  duplicate check
 
    useEffect(()=>{
@@ -19,8 +17,11 @@ export const ContactsPage = (props) => {
       /* conctacs contains the element we're looking for */
       console.log('duplicate gevonden!')
       setDuplicate(true)
+      console.log('duplicate: ' + duplicate)
     } else { 
+      setDuplicate(false)
       console.log('duplicate niet gevonden');
+      console.log('duplicate: ' + duplicate)
     }
    },[name])
 
