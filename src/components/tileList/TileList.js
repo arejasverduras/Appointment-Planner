@@ -2,13 +2,12 @@ import React from "react";
 import { Tile } from "../tile/Tile";
 
 export const TileList = ({input}) => {
-  const listOfTiles = input.map((item) => 
-    <Tile item={item} />
-  )
   
   return (
     <div>
-      <ul>{listOfTiles}</ul>
+{      input.map((item, index) => 
+    <Tile item={item} key={index} />
+  )}
     </div>
   );
 };
