@@ -13,12 +13,13 @@ export const AppointmentsPage = ({
   */
  const [appFormValue, setAppFormValue] = useState({
    title: '',
-   contact: '',
    date: '',
    time: ''
  });
 
- const { title, contact, date, time} = appFormValue;
+ const [contact, setContact] = useState('');
+
+ const { title, date, time} = appFormValue;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,11 +35,12 @@ export const AppointmentsPage = ({
 
    setAppFormValue({
     title: '',
-    contact: '',
     date: '',
     time: ''
    })
    
+   setContact('');
+
   };
 
   return (
@@ -51,6 +53,7 @@ export const AppointmentsPage = ({
           date={date}
           time={time}
           setAppFormValue={setAppFormValue}
+          setContact={setContact}
           handleSubmit={handleSubmit}
           contacts={contacts}
         />
