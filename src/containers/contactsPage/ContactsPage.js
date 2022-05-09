@@ -14,9 +14,6 @@ const [formValue, setFormValue] = useState({
 
 const { name, phone, email } = formValue;
 
-//  const [name, setName] = useState('');
-//  const [phone, setPhone] = useState('');
-//  const [email, setEmail] = useState('');
  const [duplicate, setDuplicate] = useState(false);
    //  duplicate check
 

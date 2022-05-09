@@ -76,7 +76,8 @@ const addAppointment = (newAppointment) => {
           <Route path={ROUTES.APPOINTMENTS}>
             <AppointmentsPage 
               appointments={appointments} 
-              addAppointment={addAppointment} />
+              addAppointment={addAppointment}
+              contacts={contacts} />
           </Route>
         </Switch>
       </main>
