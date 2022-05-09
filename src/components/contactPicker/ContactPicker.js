@@ -4,12 +4,8 @@ export const ContactPicker = ({
   contacts,
   setContact
 }) => {
-  const selectValues = '';
-  //contact = array of object [{},{},{}]
-  // from each object, select the value of the first key: 'name'
-  //return an <option> jsx element with the objects first value as its value
+  
 
-  //maak eerst een array met alleen de namen met map.
   const contactNamesArray = []
   
   contacts.forEach(contact => {
