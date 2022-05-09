@@ -6,9 +6,17 @@ import {ContactForm} from "../../components/contactForm/ContactForm";
 export const ContactsPage = (props) => {
   // Define state variables for contact info
 
- const [name, setName] = useState('');
- const [phone, setPhone] = useState('');
- const [email, setEmail] = useState('');
+const [formValue, setFormValue] = useState({
+  name: '',
+  phone: '',
+  email: '',
+})
+
+const { name, phone, email } = formValue;
+
+//  const [name, setName] = useState('');
+//  const [phone, setPhone] = useState('');
+//  const [email, setEmail] = useState('');
  const [duplicate, setDuplicate] = useState(false);
    //  duplicate check
 
@@ -44,9 +52,11 @@ export const ContactsPage = (props) => {
    }
    //add contact info and clear data
    props.addContact(newContact);
-    setName('');
-    setPhone('');
-    setEmail('');
+    setFormValue({
+      name: '',
+      phone: '',
+      email: '',
+    })
 
   };
 
@@ -62,9 +72,7 @@ export const ContactsPage = (props) => {
         <ContactForm name={name}
         phone={phone}
         email={email}
-        setName={setName}
-        setPhone={setPhone}
-        setEmail={setEmail}
+        setFormValue={setFormValue}
         handleSubmit={handleSubmit} />
       </section>
       <hr />
