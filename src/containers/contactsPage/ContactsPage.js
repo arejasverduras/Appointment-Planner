@@ -6,7 +6,7 @@ import {ContactForm} from "../../components/contactForm/ContactForm";
 export const ContactsPage = (props) => {
   // Define state variables for contact info
 
- const [name, setName] = useState('Michiel');
+ const [name, setName] = useState('');
  const [phone, setPhone] = useState('');
  const [email, setEmail] = useState('');
  const [duplicate, setDuplicate] = useState(false);
@@ -18,12 +18,13 @@ export const ContactsPage = (props) => {
       console.log('duplicate gevonden!')
       setDuplicate(true)
       console.log('duplicate: ' + duplicate)
+      
     } else { 
       setDuplicate(false)
       console.log('duplicate niet gevonden');
       console.log('duplicate: ' + duplicate)
     }
-   },[name])
+   },[name, duplicate, props.contacts])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,6 +33,7 @@ export const ContactsPage = (props) => {
     if the contact name is not a duplicate
     */
    if (duplicate){
+    window.alert('Naam bestaat. Kies een andere naam')
     return; 
    }
 
