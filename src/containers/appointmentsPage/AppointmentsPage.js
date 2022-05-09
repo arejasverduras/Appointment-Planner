@@ -52,6 +52,7 @@ export const AppointmentsPage = ({
           time={time}
           setAppFormValue={setAppFormValue}
           handleSubmit={handleSubmit}
+          contacts={contacts}
         />
       </section>
       <hr />
