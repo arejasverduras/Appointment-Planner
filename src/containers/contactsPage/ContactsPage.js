@@ -78,7 +78,7 @@ const { name, phone, email } = formValue;
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList contacts={props.contacts}/>
+        <TileList input={props.contacts}/>
       </section>
     </div>
   );
