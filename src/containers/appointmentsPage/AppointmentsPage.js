@@ -7,10 +7,7 @@ export const AppointmentsPage = ({
   addAppointment,
   contacts
 }) => {
-  /*
-  Define state variables for 
-  appointment info
-  */
+
  const [appFormValue, setAppFormValue] = useState({
    title: '',
    date: '',
@@ -23,9 +20,7 @@ export const AppointmentsPage = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
+
    addAppointment({
      title: title,
      contact: contact,

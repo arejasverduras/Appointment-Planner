@@ -13,8 +13,12 @@ export const ContactPicker = ({
     contactNamesArray.push(name)
   })
 
-  const contactOptions = contactNamesArray.map((naam)=> 
-    <option value={naam}>{naam}</option>
+  // const getContactNames = () => {
+  //   return contacts.map((contact) => contact.name);
+  // };
+
+  const contactOptions = contactNamesArray.map((naam, index)=> 
+    <option value={naam} key={index}>{naam}</option>
   )
   
 const handleChange = (e) => {
