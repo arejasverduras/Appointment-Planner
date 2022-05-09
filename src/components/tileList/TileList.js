@@ -8,10 +8,7 @@ export const TileList = ({input}) => {
   
   return (
     <div>
-      {/* iteratively render Tile components form props.contacts
-      using a map function */}
-     {/* render as Ul */}
-     <ul>{listOfTiles}</ul>
+      <ul>{listOfTiles}</ul>
     </div>
   );
 };
