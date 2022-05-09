@@ -38,7 +38,7 @@ const { name, phone, email } = formValue;
     if the contact name is not a duplicate
     */
    if (duplicate){
-    window.alert('Naam bestaat. Kies een andere naam')
+    // window.alert('Naam bestaat. Kies een andere naam')
     return; 
    }
 
@@ -66,6 +66,7 @@ const { name, phone, email } = formValue;
     <div>
       <section>
         <h2>Add Contact</h2>
+        {duplicate ? " - Name Already Exists" : ""}
         <ContactForm name={name}
         phone={phone}
         email={email}
